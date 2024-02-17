@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #333;
+        }
+
+        .login-container {
+            width: 300px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            color: #333333;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            margin-top: 6px;
+            margin-bottom: 10px;
+        }
+
+        .login-input:focus {
+            outline: none;
+            border-color: #4caf50;
+        }
+
+        .login-button {
+            width: 107%;
+            padding: 12px;
+            font-size: 18px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 25px; 
+        }
+
+        .login-button:hover {
+            background-color: #45a049;
+        }
+
+        .login-button:active {
+            background-color: #3f9142;
+        }
+
+        .password-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        #mostrarSenhaIcon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        #button-back {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 10px 15px;
+            background-color: gray;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <img src="https://ghosthszz.github.io/Sea-Shield/sea.png" alt="Sea Shield Logo" class="logo">
+        <h2>Login - Sea Shield</h2>
+        <form action="/login" method="POST">
+            <input class="login-input" type="email" name="email" placeholder="Email" required>
+            <input class="login-input" type="password" name="password" placeholder="Senha" required>
+            <button class="login-button" type="submit">Entrar</button>
+            
+        </form>
+        <button id="button-back" onclick="goBack()">Voltar</button>
+    </div>
+<script src="/sea-atualizado/app.js" ></script>
+</body>
+</html>
+
+</html>

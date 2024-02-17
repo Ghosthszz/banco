@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cadastro - Sea Shield</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #333;
+        }
+
+        .cadastro-container {
+            width: 300px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            color: #333333;
+        }
+
+        .cadastro-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            margin-top: 6px;
+            margin-bottom: 10px;
+        }
+
+        .cadastro-input:focus {
+            outline: none;
+            border-color: #4caf50;
+        }
+
+        .cadastro-button {
+            width: 107%;
+            padding: 12px;
+            font-size: 18px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 25px; 
+        }
+
+        .cadastro-button:hover {
+            background-color: #45a049;
+        }
+
+        .cadastro-button:active {
+            background-color: #3f9142;
+        }
+
+        #button-back {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 10px 15px;
+            background-color: gray;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cadastro-container">
+    <img src="https://ghosthszz.github.io/Sea-Shield/sea.png" alt="Sea Shield Logo" class="logo">
+    <h2>Esqueceu a Senha</h2>
+
+    <form action="/alterar-senha" method="POST">
+        <input class="cadastro-input" type="email" name="email" placeholder="Email" required>
+        <input class="cadastro-input" type="password" name="senhaAntiga" placeholder="Senha Antiga" required>
+        <input class="cadastro-input" type="password" name="novaSenha" placeholder="Nova Senha" required>
+        <button class="cadastro-button" type="submit">Alterar Senha</button>
+    </form>
+        <button id="button-back" onclick="goBack()">Voltar</button>
+    </div>
+</body>
+</html>
+
